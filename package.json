@@ -1,0 +1,12 @@
+{
+  "name": "callbag",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "staltz.com",
+  "license": "CC0",
+  "devDependencies": {
+    "ts-node": "^4.1.0",
+    "typescript": "^2.6.2"
+  }
+}

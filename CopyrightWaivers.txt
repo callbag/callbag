@@ -1,0 +1,20 @@
+Copyright Statement for Contributions to the Callbag Standard
+=============================================================
+
+I hereby represent that all present, past and future contributions I make to
+the Callbag project (which is the repository at callbag/callbag on GitHub) are
+governed by the Creative Commons Zero 1.0 Universal copyright statement, placing
+my contributions in the public domain. This entails that to the extent possible
+under law I waive all copyright and related or neighboring rights to the code or
+documents I contribute. I also represent that I have the authority to perform
+the above waiver with respect to the entirety of my contributions.
+
+The text of the copyright statement is included in the COPYING file at the root
+of the Callbag repository at
+https://github.com/callbag/callbag/blob/master/COPYING.
+
+Underwriting parties:
+
+GitHub username| Real Name, Email Address used for git, Company (optional)
+---------------+----------------------------------------------------------------
+staltz         | Andre Medeiros, andre@staltz.com
