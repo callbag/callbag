@@ -9,7 +9,6 @@ export type RESERVED_7 = 7;
 export type RESERVED_8 = 8;
 export type RESERVED_9 = 9;
 
-export type Dispose = () => void;
-export type Callbag = (type: number, data: any) => Dispose | void;
+export type Callbag = (type: number, data: any) => void;
 export type Factory = (...args: Array<any>) => Callbag;
 export type Operator = (...args: Array<any>) => (source: Callbag) => Callbag;

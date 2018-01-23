@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "types": "types.d.ts",
   "author": "staltz.com",
   "license": "CC0",
   "devDependencies": {
