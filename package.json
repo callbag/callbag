@@ -1,7 +1,11 @@
 {
   "name": "callbag",
   "version": "1.0.0",
-  "description": "",
+  "description": "A standard for JS callbacks",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/callbag/callbag.git"
+  },
   "main": "index.js",
   "types": "types.d.ts",
   "author": "staltz.com",
