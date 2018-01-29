@@ -5,7 +5,7 @@
 * Minimal overhead streams, Iterables, Observables, AsyncIterables, etc
 * Modular (each operator is its own npm package)
 * Light (few memory allocations)
-* Not a library, just a standard (for a real library, see [callbag-basics](https://github.com/staltz/callbag-basics)
+* Not a library, just a standard (for a real library, see [callbag-basics](https://github.com/staltz/callbag-basics))
 
 ## Summary
 
