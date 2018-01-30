@@ -1,6 +1,6 @@
 {
   "name": "callbag",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A standard for JS callbacks",
   "repository": {
     "type": "git",
@@ -10,6 +10,14 @@
   "types": "types.d.ts",
   "author": "staltz.com",
   "license": "CC0",
+  "keywords": [
+    "callbag",
+    "callback",
+    "standard",
+    "spec",
+    "observable",
+    "iterable"
+  ],
   "devDependencies": {
     "ts-node": "^4.1.0",
     "typescript": "^2.6.2"
