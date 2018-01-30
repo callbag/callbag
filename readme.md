@@ -39,7 +39,7 @@ The capitalized keywords used here follow [IETF's RFC 2119](https://www.ietf.org
 
 **Greets**: `(type: 0, cb: Callbag) => void`
 
-A callbag is *greeted* when the first argument is `1` and the second argument is another callbag (a function).
+A callbag is *greeted* when the first argument is `0` and the second argument is another callbag (a function).
 
 **Handshake**
 
