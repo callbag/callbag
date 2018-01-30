@@ -6,6 +6,7 @@
 * Modular (each operator is its own npm package)
 * Light (few memory allocations)
 * Not a library, just a standard (for a real library, see [callbag-basics](https://github.com/staltz/callbag-basics))
+* Easy to create your own utilities, [read how here](https://github.com/staltz/callbag/blob/master/getting-started.md)
 
 ## Summary
 
@@ -26,7 +27,7 @@
 - *Deliver*: if a callbag is called with `1` as the first argument, we say "the callbag is delivered data", while the code which performed the call "delivers data to the callbag"
 - *Terminate*: if a callbag is called with `2` as the first argument, we say "the callbag is terminated", while the code which performed the call "terminates the callbag"
 - *Source*: a callbag which is expected to deliver data
-- *Sink*: a callbag which is expected to be delivered data 
+- *Sink*: a callbag which is expected to be delivered data
 - *Puller*: a sink that delivers data to a source
 - *Pullable*: a source that delivers data to a sink for each time it is delivered data from the sink
 - *Listener*: a sink that does not deliver data to the source
@@ -54,8 +55,8 @@ After a mutual greet between source and sink, the source MAY terminate the sink.
 
 A sink MAY be delivered data, one or multiple times.
 
-A source MUST NOT deliver data to a sink before handshake. 
-A source MUST not deliver data to a sink after terminating it. 
+A source MUST NOT deliver data to a sink before handshake.
+A source MUST not deliver data to a sink after terminating it.
 A sink MUST NOT be delivered data after it terminates a source.
 
 A source MAY be delivered data, one or multiple times. This possibility enables pullable sources which then deliver data to a sink. However, this spec puts no restriction on the ratio of source deliveries versus sink deliveries in a pull relationship between source and sink.
