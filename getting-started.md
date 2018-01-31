@@ -177,7 +177,7 @@ function source(type, data) {
 }
 ```
 
-Now the question is: what should be the talkback? Its purpose is for the sink to send `type=2` messages upwards, for cancelling the setInterval for instance. If we make `talkback=source`, then we lose support for multiple sinks. How? Think about it: if the source is called multiple times with `type=2` and a sink payload, then we have called `setInterval` multiple times. When one of those sinks sends `type=2` upwards, we want to stop the setInterval only for that sink, not for all of them. This is why we need a talkback for every different sink. Below, we make the talkback recognize `type=2` messages and clearInterval:
+Now the question is: what should be the talkback? Its purpose is for the sink to send `type=2` messages upwards, for cancelling the setInterval for instance. If we make `talkback=source`, then we lose support for multiple sinks. How? Think about it: if the source is called multiple times with `type=0` and a sink payload, then we have called `setInterval` multiple times. When one of those sinks sends `type=2` upwards, we want to stop the setInterval only for that sink, not for all of them. This is why we need a talkback for every different sink. Below, we make the talkback recognize `type=2` messages and clearInterval:
 
 ```js
 function source(type, data) {
