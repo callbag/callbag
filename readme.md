@@ -31,7 +31,7 @@
 - *Puller*: a sink that delivers data to a source
 - *Pullable*: a source that delivers data to a sink for each time it is delivered data from the sink
 - *Listener*: a sink that does not deliver data to the source
-- *Listenable*: a source that delivers data to a sink, but ignores any data deliverd to it
+- *Listenable*: a source that delivers data to a sink, but ignores any data delivered to it
 
 ### Protocol
 
@@ -53,17 +53,17 @@ After a mutual greet between source and sink, the source MAY terminate the sink.
 
 **Data delivery** `(type: 1, data: any) => void`
 
-A sink MAY be delivered data, one or multiple times.
+A sink MAY be delivered data, once or multiple times.
 
 A source MUST NOT deliver data to a sink before handshake.
 A source MUST not deliver data to a sink after terminating it.
 A sink MUST NOT be delivered data after it terminates a source.
 
-A source MAY be delivered data, one or multiple times. This possibility enables pullable sources which then deliver data to a sink. However, this spec puts no restriction on the ratio of source deliveries versus sink deliveries in a pull relationship between source and sink.
+A source MAY be delivered data, once or multiple times. This possibility enables pullable sources which then deliver data to a sink. However, this spec puts no restriction on the ratio of source deliveries versus sink deliveries in a pull relationship between source and sink.
 
 ### Unspecified
 
-A callbag SHOULD NOT be called with either of these numbers as the first argument: `3`, `4`, `5`, `6`, `7`, `8`, `9`. Those are called *reserved codes*.
+A callbag SHOULD NOT be called with any of these numbers as the first argument: `3`, `4`, `5`, `6`, `7`, `8`, `9`. Those are called *reserved codes*.
 
 ## Legal
 
