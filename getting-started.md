@@ -255,7 +255,7 @@ pipe(
 Let's see an example operator called `multiplyBy` that works on a source of numbers:
 
 ```js
-const multiplyByTen = factor => inputSource => {
+const multiplyBy = factor => inputSource => {
   return function outputSource(start, outputSink) {
     if (start !== 0) return;
     inputSource(0, (t, d) => {
