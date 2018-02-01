@@ -261,7 +261,7 @@ const multiplyBy = factor => inputSource => {
     inputSource(0, (t, d) => {
       if (t === 1) outputSink(1, d * factor);
       else outputSink(t, d);
-    };
+    });
   };
 }
 ```
