@@ -56,7 +56,7 @@ After a mutual greet between source and sink, the source MAY terminate the sink.
 A sink MAY be delivered data, once or multiple times.
 
 A source MUST NOT deliver data to a sink before handshake.
-A source MUST not deliver data to a sink after terminating it.
+A source MUST NOT deliver data to a sink after terminating it.
 A sink MUST NOT be delivered data after it terminates a source.
 
 A source MAY be delivered data, once or multiple times. This possibility enables pullable sources which then deliver data to a sink. However, this spec puts no restriction on the ratio of source deliveries versus sink deliveries in a pull relationship between source and sink.
