@@ -4,7 +4,7 @@ The Callbag spec is unopinionated and doesn't dictate how the implementation sho
 
 ## Handshakes and talkbacks
 
-A handshake is when the sink greets the source and the source greets the sink back. Usually the order is `source(0, sink)` then inside the implementation of `source` we call `sink(0, talkback)`. Notice that `talkback` as the payload. It is possible that `talkback === source`, but often the talkback will be another function.
+A handshake is when the sink greets the source and the source greets the sink back. Usually the order is `source(0, sink)` then inside the implementation of `source` we call `sink(0, talkback)`. Notice that `talkback` is the payload. It is possible that `talkback === source`, but often the talkback will be another function.
 
 Talkbacks receive `type=1` and `type=2` messages from the sink, but never `type=0`, because the handshake has already occurred (it's just two `type=0` messages, not more than two).
 
@@ -231,7 +231,7 @@ Notice that in this case the talkback doesn't need to check `type=2` messages, b
 
 ## Creating an operator
 
-Operators are functions that take a source as input and return another source based on the first one. They are useful for creating transformation pipelines through a utility like `pipe`. The Callbag spec itself doesn't dictate how you should create operators, but if you want to keep your operators interoperable with `pipe`, then follow the simple convention:
+Operators are functions that take a source as input and return another source based on the first one. They are useful for creating transformation pipelines through a utility like [`pipe`](https://github.com/staltz/callbag-pipe). The Callbag spec itself doesn't dictate how you should create operators, but if you want to keep your operators interoperable with `pipe`, then follow the simple convention:
 
 `const myOperator = args => inputSource => outputSource`
 
@@ -279,7 +279,7 @@ Factories of sources are similar, but even simpler than operators. They just don
 
 `const myFactory = args => outputSource`
 
-Examples are: fromIter, fromObs, interval, combine, merge.
+Examples are: [fromIter](https://github.com/staltz/callbag-from-iter), [fromObs](https://github.com/staltz/callbag-from-obs), [interval](https://github.com/staltz/callbag-interval), [combine](https://github.com/staltz/callbag-combine), [merge](https://github.com/staltz/callbag-merge).
 
 ## Inspiration
 
