@@ -39,7 +39,7 @@ A callbag is *greeted* when the first argument is `0` and the second argument is
 
 **Handshake**
 
-When a source is greeted and given a sink as payload, the sink MUST be greeted back with a callbag payload that is either the source itself or another callbag (known as the "talkback"). In other words, greets are mutual. Reciprocal greeting is called "handshaking".
+When a source is greeted and given a sink as payload, the sink MUST be greeted back with a callbag payload that is either the source itself or another callbag (known as the "talkback"). In other words, greets are mutual. Reciprocal greeting is called a *handshake*.
 
 **Termination**: `(type: 2, err?: any) => void`
 
@@ -49,15 +49,17 @@ After the handshake, the source MAY terminate the sink. Alternatively, the sink 
 
 **Data delivery** `(type: 1, data: any) => void`
 
-A sink MAY be delivered data, once or multiple times.
+Amount of deliveries:
 
-A source MUST NOT deliver data to a sink before handshake.
-A source MUST NOT deliver data to a sink after terminating it.
-A sink MUST NOT be delivered data after it terminates a source.
+- A callbag (either sink or source) MAY be delivered data, once or multiple times
 
-A source MAY be delivered data, once or multiple times.
+Window of valid deliveries:
 
-### Unspecified
+- A callbag MUST NOT be delivered data before it has been greeted
+- A callbag MUST NOT be delivered data after it has been terminated
+- A sink MUST NOT be delivered data after it terminates its source
+
+**Reserved codes**
 
 A callbag SHOULD NOT be called with any of these numbers as the first argument: `3`, `4`, `5`, `6`, `7`, `8`, `9`. Those are called *reserved codes*.
 
