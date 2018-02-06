@@ -61,7 +61,7 @@ Window of valid deliveries:
 
 **Reserved codes**
 
-A callbag SHOULD NOT be called with any of these numbers as the first argument: `3`, `4`, `5`, `6`, `7`, `8`, `9`. Those are called *reserved codes*.
+A callbag SHOULD NOT be called with any of these numbers as the first argument: `3`, `4`, `5`, `6`, `7`, `8`, `9`. Those are called *reserved codes*. A callbag MAY be called with codes other than those in the range `[0-9]`, but this specification makes no claims in those cases.
 
 ## Legal
 
