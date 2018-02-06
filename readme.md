@@ -45,7 +45,7 @@ When a source is greeted and given a sink as payload, the sink MUST be greeted b
 
 A callbag is *terminated* when the first argument is `2` and the second argument is either undefined (signalling termination due to success) or any truthy value (signalling termination due to failure).
 
-After a mutual greet between source and sink, the source MAY terminate the sink. Alternatively, the sink MAY terminate the source. If the source terminates the sink, then the sink SHOULD NOT terminate the source, and vice-versa. In other words, termination SHOULD NOT be mutual.
+After the handshake, the source MAY terminate the sink. Alternatively, the sink MAY terminate the source after the handshake has occurred. If the source terminates the sink, then the sink SHOULD NOT terminate the source, and vice-versa. In other words, termination SHOULD NOT be mutual.
 
 **Data delivery** `(type: 1, data: any) => void`
 
