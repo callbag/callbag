@@ -18,6 +18,7 @@ Underwriting parties:
 GitHub username| Real Name, Email Address used for git, Company (optional)
 ---------------+----------------------------------------------------------------
 staltz         | Andre Medeiros, andre@staltz.com
+johnrees       | John Rees,
 VinSpee        | Vince Speelman, v@vinspee.me
 acailly        | Antoine Cailly,
 krawaller      | David Waller, david@krawaller.se
