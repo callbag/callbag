@@ -19,3 +19,4 @@ GitHub username| Real Name, Email Address used for git, Company (optional)
 ---------------+----------------------------------------------------------------
 staltz         | Andre Medeiros, andre@staltz.com
 krawaller      | David Waller, david@krawaller.se
+bloodyKnuckles | Jay Scott ANDERSON, 
