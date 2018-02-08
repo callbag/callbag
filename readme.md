@@ -73,7 +73,7 @@ This project is offered to the Public Domain in order to allow free use by inter
   </a>
   <br />
   To the extent possible under law,
-  <a rel="dct:publisher" href="http://github.com/callbag/callbag">
+  <a rel="dct:publisher" href="https://github.com/callbag/callbag/blob/master/CopyrightWaivers.txt">
     <span property="dct:title">Callbag Standard Special Interest Group</span></a>
   has waived all copyright and related or neighboring rights to
   <span property="dct:title">Callbag Standard</span>.
