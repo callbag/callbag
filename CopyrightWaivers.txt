@@ -18,3 +18,4 @@ Underwriting parties:
 GitHub username| Real Name, Email Address used for git, Company (optional)
 ---------------+----------------------------------------------------------------
 staltz         | Andre Medeiros, andre@staltz.com
+acailly        | Antoine Cailly,
