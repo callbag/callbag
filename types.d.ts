@@ -12,7 +12,7 @@ export type RESERVED_9 = 9;
 export type Callbag =
   & ((start: START, talkback: Callbag) => void)
   & ((data: DATA, payload?: any) => void)
-  & ((terminate: END, error?: any) => void);
+  & ((end: END, error?: any) => void);
 
 export type Factory = (...args: Array<any>) => Callbag;
 
