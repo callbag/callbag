@@ -8,6 +8,8 @@
 * Not a library, just a standard (for a real library, see [callbag-basics](https://github.com/staltz/callbag-basics))
 * Easy to create your own utilities, [read how here](https://github.com/staltz/callbag/blob/master/getting-started.md)
 
+Read also the [announcement blog post](https://staltz.com/why-we-need-callbags.html) and this [introductory blog post](http://blog.krawaller.se/posts/callbags-introduction/).
+
 ## Summary
 
 - Every producer of data is a function `(type: number, payload?: any) => void`
