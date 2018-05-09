@@ -9,11 +9,11 @@ export type RESERVED_7 = 7;
 export type RESERVED_8 = 8;
 export type RESERVED_9 = 9;
 
-export type Callbag =
+export type Callbag<T = any, E = any> =
   & ((start: START, talkback: Callbag) => void)
-  & ((data: DATA, payload?: any) => void)
-  & ((end: END, error?: any) => void);
+  & ((data: DATA, payload?: T) => void)
+  & ((end: END, error?: E) => void);
 
-export type Factory = (...args: Array<any>) => Callbag;
+export type Factory = <T = any, E = any>(...args: Array<any>) => Callbag<T, E>;
 
-export type Operator = (...args: Array<any>) => (source: Callbag) => Callbag;
+export type Operator = <T = any, E = any>(...args: Array<any>) => (source: Callbag) => Callbag<T, E>;
