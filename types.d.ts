@@ -9,11 +9,28 @@ export type RESERVED_7 = 7;
 export type RESERVED_8 = 8;
 export type RESERVED_9 = 9;
 
-export type Callbag =
-  & ((start: START, talkback: Callbag) => void)
-  & ((data: DATA, payload?: any) => void)
-  & ((end: END, error?: any) => void);
+/**
+ * A Callbag dynamically receives input of type I
+ * and dynamically delivers output of type O
+ */
+export type Callbag<I, O> = {
+  (t: START, d: Callbag<O, I>): void;
+  (t: DATA, d: I): void;
+  (t: END, d?: any): void;
+};
 
-export type Factory = (...args: Array<any>) => Callbag;
+/**
+ * A source only delivers data
+ */
+export type Source<T> = Callbag<void, T>;
 
-export type Operator = (...args: Array<any>) => (source: Callbag) => Callbag;
+/**
+ * A sink only receives data
+ */
+export type Sink<T> = Callbag<T, void>;
+
+export type SourceFactory<T> = (...args: Array<any>) => Source<T>;
+
+export type SourceOperator<T, R> = (
+  ...args: Array<any>
+) => (source: Source<T>) => Source<R>;
