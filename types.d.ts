@@ -34,3 +34,9 @@ export type SourceFactory<T> = (...args: Array<any>) => Source<T>;
 export type SourceOperator<T, R> = (
   ...args: Array<any>
 ) => (source: Source<T>) => Source<R>;
+
+/**
+ * Conditional types for contained type retrieval
+ */
+export type UnwrapSource<T extends Source<any>> = T extends Source<infer R> ? R : never;
+export type UnwrapSink<T extends Sink<any>> = T extends Sink<infer R> ? R : never;

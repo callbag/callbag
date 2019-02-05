@@ -23,4 +23,6 @@ johnrees       | John Rees,
 VinSpee        | Vince Speelman, v@vinspee.me
 acailly        | Antoine Cailly,
 krawaller      | David Waller, david@krawaller.se
-bloodyKnuckles | Jay Scott ANDERSON, 
+bloodyKnuckles | Jay Scott ANDERSON
+Andarist       | Mateusz Burzyński, mateuszburzynski@gmail.com
+
