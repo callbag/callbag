@@ -25,4 +25,5 @@ acailly        | Antoine Cailly,
 krawaller      | David Waller, david@krawaller.se
 bloodyKnuckles | Jay Scott ANDERSON
 Andarist       | Mateusz Burzyński, mateuszburzynski@gmail.com
+loreanvictor   | Eugene Ghanizadeh Khoub, ghanizadeh.eugene@gmail.com
 
