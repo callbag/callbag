@@ -22,12 +22,12 @@ export type Callbag<I, O> = {
 /**
  * A source only delivers data
  */
-export type Source<T> = Callbag<void, T>;
+export type Source<T> = Callbag<never, T>;
 
 /**
  * A sink only receives data
  */
-export type Sink<T> = Callbag<T, void>;
+export type Sink<T> = Callbag<T, never>;
 
 export type SourceFactory<T> = (...args: Array<any>) => Source<T>;
 
