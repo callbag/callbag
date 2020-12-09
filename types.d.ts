@@ -13,21 +13,21 @@ export type RESERVED_9 = 9;
  * A Callbag dynamically receives input of type I
  * and dynamically delivers output of type O
  */
-export type Callbag<I, O> = {
+export interface Callbag<I, O> {
   (t: START, d: Callbag<O, I>): void;
   (t: DATA, d: I): void;
   (t: END, d?: any): void;
-};
+}
 
 /**
  * A source only delivers data
  */
-export type Source<T> = Callbag<never, T>;
+export interface Source<T> extends Callbag<never, T> {}
 
 /**
  * A sink only receives data
  */
-export type Sink<T> = Callbag<T, never>;
+export interface Sink<T> extends Callbag<T, never> {}
 
 export type SourceFactory<T> = (...args: Array<any>) => Source<T>;
 
