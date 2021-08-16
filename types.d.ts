@@ -9,14 +9,24 @@ export type RESERVED_7 = 7;
 export type RESERVED_8 = 8;
 export type RESERVED_9 = 9;
 
+export type CallbagArgs<I, O> =
+  // handshake:
+  | [type: START, talkback: Callbag<O, I>]
+  // data from source:
+  | [type: DATA, data: I]
+  // pull request:
+  | [type: DATA]
+  // error:
+  | [type: END, error: unknown]
+  // end without error:
+  | [type: END, _?: undefined]
+
 /**
  * A Callbag dynamically receives input of type I
  * and dynamically delivers output of type O
  */
 export interface Callbag<I, O> {
-  (t: START, d: Callbag<O, I>): void;
-  (t: DATA, d: I): void;
-  (t: END, d?: any): void;
+  (...args: CallbagArgs<I, O>): void
 }
 
 /**
