@@ -11,15 +11,15 @@ export type RESERVED_9 = 9;
 
 export type CallbagArgs<I, O> =
   // handshake:
-  | [type: typeof START, talkback: Callbag<O, I>]
+  | [type: START, talkback: Callbag<O, I>]
   // data from source:
-  | [type: typeof DATA, data: I]
+  | [type: DATA, data: I]
   // pull request:
-  | [type: typeof DATA]
+  | [type: DATA]
   // error:
-  | [type: typeof END, error: unknown]
+  | [type: END, error: unknown]
   // end without error:
-  | [type: typeof END, _?: undefined]
+  | [type: END, _?: undefined]
 
 /**
  * A Callbag dynamically receives input of type I
